@@ -1,0 +1,31 @@
+:root {
+  --primary-color: #000000;
+  --secondary-color: #ffffff;
+  --font-family: "Raleway", sans-serif;
+}
+
+body {
+  font-family: "Open Sans", sans-serif;
+  color: var(--primary-color);
+  background-color: var(--secondary-color);
+}
+.container {
+}
+
+/* header ***************************************************************/
+.header {
+}
+.header-logo {
+}
+.header-nav {
+}
+.header-list {
+}
+.header-item {
+}
+.header-link {
+}
+.header-contact {
+}
+.header-btn {
+}
