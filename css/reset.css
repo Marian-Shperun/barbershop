@@ -10,16 +10,13 @@ h1,
 h2,
 h3,
 h4,
-h5,
-h6,
 p {
   margin: 0;
-  padding: 0;
 }
-/* ul {
-  padding: 0;
+ul {
+  padding-left: 0;
   margin: 0;
-} */
+}
 
 /* a[href] {
   text-decoration: none;
@@ -27,9 +24,9 @@ p {
 img {
   display: block;
 }
-/* .list {
+.list {
   list-style: none;
-} */
+}
 .link {
   text-decoration: none;
 }
