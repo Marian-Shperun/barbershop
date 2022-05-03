@@ -1,0 +1,31 @@
+.about__container {
+  display: flex;
+  column-gap: 50px;
+}
+.about__list {
+  display: flex;
+  flex-shrink: 0; /*!!!!*/
+}
+
+.about-list__item:first-child {
+  margin-right: 30px;
+}
+.about-pre-title {
+  color: #303030;
+  margin-bottom: var(--tipycal-gap);
+}
+
+.about-after-title {
+  color: #555555;
+  margin-bottom: var(--tipycal-gap);
+}
+.about-content__text {
+  font-size: 14px;
+  line-height: 1.86;
+  letter-spacing: 0.02em;
+  color: #555555;
+  margin-bottom: var(--tipycal-gap);
+}
+.about-content__button-tex {
+  color: var(--secondery-btn-color);
+}

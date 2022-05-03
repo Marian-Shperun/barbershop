@@ -37,8 +37,8 @@
       rel="stylesheet"
       href="https://unpkg.com/swiper@8/swiper-bundle.min.css"
     />
-    <link rel="stylesheet" href="./css/reset.css" />
-    <link rel="stylesheet" href="./css/styles.css" />
+    <link rel="stylesheet" href="./css/main.min.css" />
+    <link rel="stylesheet" href="./css/main.css" />
   </head>
 
   <body>
@@ -46,15 +46,15 @@
     <header class="header">
       <div class="container header-container">
         <a
-          class="header-logo link animate__animated animate__bounce"
+          class="logo header__logo link animate__animated animate__bounce"
           href="./index.html"
         >
-          <svg class="masters-soc-icon" width="66" height="55">
+          <svg class="logo__icon" width="66" height="55">
             <use href="./img/icon/symbol-defs.svg#icon-Logo"></use>
           </svg>
         </a>
-        <nav class="header-nav">
-          <ul class="header-list list">
+        <nav class="navigation">
+          <ul class="list menu__list">
             <li class="header-item">
               <a class="header-link link" href="">О нас</a>
             </li>
@@ -69,12 +69,14 @@
             </li>
           </ul>
         </nav>
-        <a class="header-tel link" href="tel:+380441111111"
-          >+38 044 111 11 11</a
-        >
-        <button class="header-btn btn" data-modal-open type="button">
-          онлайн-запись
-        </button>
+        <div class="connect">
+          <a class="connect__tel link" href="tel:+380441111111"
+            >+38 044 111 11 11</a
+          >
+          <button class="connect__btn btn" data-modal-open type="button">
+            онлайн-запись
+          </button>
+        </div>
       </div>
     </header>
 
@@ -82,13 +84,13 @@
       <!-- hero -->
       <section class="hero">
         <div class="container hero-container">
-          <div class="hero-soc">
-            <ul class="hero-list list">
-              <li class="hero-item">
-                <a class="hero-link" href="" target="_blank">Youtube</a>
+          <div class="soc">
+            <ul class="soc__list list">
+              <li class="soc-list__item">
+                <a class="soc-list__link" href="" target="_blank">Youtube</a>
               </li>
-              <li class="hero-item">
-                <a class="hero-link" href="" target="_blank">Instagram</a>
+              <li class="soc-list__item">
+                <a class="soc-list__link" href="" target="_blank">Instagram</a>
               </li>
             </ul>
           </div>
@@ -97,10 +99,10 @@
             <div class="swiper-wrapper">
               <div class="hero-wrapper swiper-slide">
                 <div class="hero-content">
-                  <p class="hero-pre-title pre-title" lang="en">
+                  <p class="hero-content__top-text top-text" lang="en">
                     A hair salon for men in Kyiv
                   </p>
-                  <h1 class="hero-title title" lang="en">BarberShop</h1>
+                  <h1 class="hero-content__title" lang="en">BarberShop</h1>
                   <p class="hero-after-title after-title">
                     Мы эксперты в модных мужских стрижках. Работаем быстро,
                     осторожно и со вкусом.
@@ -135,9 +137,9 @@
 
       <!-- about us  -->
       <section class="about section">
-        <div class="container about-container">
-          <ul class="about-list list">
-            <li class="about-item">
+        <div class="container about__container">
+          <ul class="about__list list">
+            <li class="about-list__item">
               <img
                 src="./img/about-us/img1.jpg"
                 alt="барбер бреет шею"
@@ -145,7 +147,7 @@
                 height="445"
               />
             </li>
-            <li class="about-item">
+            <li class="about-list__item">
               <img
                 src="./img/about-us/img2.jpg"
                 alt="барбер стрижет кантик"
@@ -154,21 +156,21 @@
               />
             </li>
           </ul>
-          <div class="about-description">
-            <p class="about-pre-title pre-title">О НАС</p>
-            <h2 class="about-title title">Лучший Барбершоп твоего города</h2>
+          <div class="about-content">
+            <p class="about-content__top-text top-text top-text--dark">О НАС</p>
+            <h2 class="about-content__title title">Лучший Барбершоп твоего города</h2>
             <p class="about-after-title after-title">
               Если ты хочешь добавить в свой образ больше уверенности – тебе
               точно к нам.
             </p>
-            <p class="about-text">
+            <p class="about-content__text">
               Мы команда, которая никогда не останавливается на достигнутом и
               жаждет перемен. И когда ты попадешь в руки нашего мастера, то уже
               никогда не сможешь быть прежним. Мы команда, которая всегда с
               клиентами "на одной волне". Поэтому, мы всегда готовы
               усовершенствовать каждого, кто к нам приходит!
             </p>
-            <button class="abour-btn btn" type="button">онлайн-запись</button>
+            <button class="about-content__button-tex btn" type="button">онлайн-запись</button>
           </div>
         </div>
       </section>

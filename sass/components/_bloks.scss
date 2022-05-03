@@ -1,0 +1,60 @@
+body {
+  font-family: "Open Sans", sans-serif;
+  color: var(--primary-color);
+  background-color: var(--secondary-color);
+}
+
+@import 'visuality-hidden';
+
+.section {
+  padding-top: 130px;
+  padding-bottom: 130px;
+}
+.container {
+  max-width: 1200px;
+  padding: 0 15px;
+  margin: 0 auto;
+}
+
+.top-text {
+  display: flex;
+  align-items: center;
+
+  margin-bottom: var(--tipycal-gap);
+  font-weight: 600;
+  font-size: 11px;
+  line-height: 1.36;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+
+  color: #303030;
+}
+.top-text::before {
+  content: "";
+  width: 63px;
+  height: 1px;
+  margin-right: 20px;
+  background-color: var(--accent-color);
+  /* background-color: currentColor; */
+}
+
+.title {
+  margin-bottom: 44px;
+  font-family: var(--secondery-font-family);
+  font-size: 42px;
+  line-height: 1.16;
+  letter-spacing: 0.05em;
+
+  color: var(--secondary-title-color);
+}
+
+.after-title {
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 1.67;
+  letter-spacing: 0.02em;
+
+  margin-bottom: var(--tipycal-gap);
+}
+
+@import "./btn";
