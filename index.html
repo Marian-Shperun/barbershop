@@ -19,12 +19,23 @@
       rel="stylesheet"
     />
     <title>barbershop</title>
+
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.1.0/modern-normalize.min.css"
       integrity="sha512-wpPYUAdjBVSE4KJnH1VR1HeZfpl1ub8YT/NKx4PuQ5NmX2tKuGu6U/JRp5y+Y8XG2tV+wKQpNHVUX03MfMFn9Q=="
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/swiper@8/swiper-bundle.min.css"
     />
     <link rel="stylesheet" href="./css/reset.css" />
     <link rel="stylesheet" href="./css/styles.css" />
@@ -34,7 +45,10 @@
     <!-- header -->
     <header class="header">
       <div class="container header-container">
-        <a class="header-logo link" href="./index.html">
+        <a
+          class="header-logo link animate__animated animate__bounce"
+          href="./index.html"
+        >
           <svg class="masters-soc-icon" width="66" height="55">
             <use href="./img/icon/symbol-defs.svg#icon-Logo"></use>
           </svg>
@@ -58,7 +72,9 @@
         <a class="header-tel link" href="tel:+380441111111"
           >+38 044 111 11 11</a
         >
-        <button class="header-btn btn" type="button">онлайн-запись</button>
+        <button class="header-btn btn" data-modal-open type="button">
+          онлайн-запись
+        </button>
       </div>
     </header>
 
@@ -66,30 +82,53 @@
       <!-- hero -->
       <section class="hero">
         <div class="container hero-container">
-          <ul class="hero-list list">
-            <li class="hero-item">
-              <a class="hero-link" href="" target="_blank">Youtube</a>
-            </li>
-            <li class="hero-item">
-              <a class="hero-link" href="" target="_blank">Instagram</a>
-            </li>
-          </ul>
+          <div class="hero-soc">
+            <ul class="hero-list list">
+              <li class="hero-item">
+                <a class="hero-link" href="" target="_blank">Youtube</a>
+              </li>
+              <li class="hero-item">
+                <a class="hero-link" href="" target="_blank">Instagram</a>
+              </li>
+            </ul>
+          </div>
           <!-- hero-wrapper -->
-          <div class="hero-wrapper">
-            <div class="hero-content">
-              <p class="hero-pre-title pre-title" lang="en">
-                A hair salon for men in Kyiv
-              </p>
-              <h1 class="hero-title title" lang="en">BarberShop</h1>
-              <p class="hero-after-title after-title">
-                Мы эксперты в модных мужских стрижках. Работаем быстро,
-                осторожно и со вкусом.
-              </p>
+          <div class="swiper hero-swiper">
+            <div class="swiper-wrapper">
+              <div class="hero-wrapper swiper-slide">
+                <div class="hero-content">
+                  <p class="hero-pre-title pre-title" lang="en">
+                    A hair salon for men in Kyiv
+                  </p>
+                  <h1 class="hero-title title" lang="en">BarberShop</h1>
+                  <p class="hero-after-title after-title">
+                    Мы эксперты в модных мужских стрижках. Работаем быстро,
+                    осторожно и со вкусом.
+                  </p>
+                </div>
+                <!-- <div class="pagination">
+                  <p>Назад</p>
+                  <p>Вперед</p>
+                </div> -->
+              </div>
+              <div class="hero-wrapper swiper-slide">
+                <div class="hero-content">
+                  <p class="hero-pre-title pre-title" lang="en">
+                    A hair salon for men in Kyiv
+                  </p>
+                  <h1 class="hero-title title" lang="en">BarberShop</h1>
+                  <p class="hero-after-title after-title">
+                    Мы эксперты в модных мужских стрижках. Работаем быстро,
+                    осторожно и со вкусом.
+                  </p>
+                </div>
+                <!-- <div class="pagination">
+                  <p>Назад</p>
+                  <p>Вперед</p>
+                </div> -->
+              </div>
             </div>
-            <!-- <div class="pagination">
-              <p>Назад</p>
-              <p>Вперед</p>
-            </div> -->
+            <div class="swiper-pagination"></div>
           </div>
         </div>
       </section>
@@ -197,7 +236,7 @@
             <ul class="reasons-list list">
               <li class="reasons-item">
                 <!-- <sup>+</sup> -->
-                <span class="reasons-item-count">600</span> 
+                <span class="reasons-item-count">600</span>
                 <p class="reasons-item-text">Довольных клиентов в день</p>
               </li>
               <li class="reasons-item">
@@ -511,7 +550,17 @@
         </div>
       </div>
     </footer>
+    <div class="backdrop is-hidden" data-modal>
+      <div class="modal">
+        <div class="modal-close" data-modal-close></div>
+        <form cls="modal-form" action="#">
+          <input type="text" name="name" placeholder="name">
+          <button type="submit">відправити</button>
+        </form>
+      </div>
+    </div>
 
+    <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
     <script src="./js/main.js"></script>
   </body>
 </html>

@@ -25,6 +25,9 @@ img {
   display: block;
   width: 100%;
 }
+input {
+  background: transparent; 
+}
 .list {
   list-style: none;
 }
