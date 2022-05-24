@@ -1,9 +1,11 @@
 .header {
   position: absolute;
   width: 100%;
-  z-index: 10;
-  /* background-color: #8f8e8e; */
 
+  z-index: 10;
+  @media screen and (max-width: 767px) {
+    padding-top: 40px;
+  }
   @include desktop {
     padding-top: 32px;
   }
@@ -62,7 +64,7 @@
     align-items: center;
     margin-top: 40px;
   }
-  @include tablet {
+  @include desktop {
     flex-direction: row;
     margin-top: 0;
     margin-right: 4px;
