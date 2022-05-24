@@ -38,13 +38,12 @@
       href="https://unpkg.com/swiper@8/swiper-bundle.min.css"
     />
     <link rel="stylesheet" href="./css/main.min.css" />
-    <link rel="stylesheet" href="./css/main.css" />
   </head>
 
   <body>
     <!-- header -->
     <header class="header">
-      <div class="container header-container">
+      <div class="header-container container">
         <a
           class="logo header__logo link animate__animated animate__bounce"
           href="./index.html"
@@ -56,7 +55,9 @@
         <nav class="navigation">
           <ul class="list menu__list">
             <li class="header-item">
-              <a class="header-link link" href="">О нас</a>
+              <a class="header-link menu-list__link--current link" href=""
+                >О нас</a
+              >
             </li>
             <li class="header-item">
               <a class="header-link link" href="">Услуги и цены</a>
@@ -77,13 +78,79 @@
             онлайн-запись
           </button>
         </div>
+        <button type="button" class="btn-menu">
+          <svg class="logo__icon" width="24" height="16">
+            <use href="./img/icon/symbol-defs.svg#icon-menu"></use>
+          </svg>
+        </button>
+      </div>
+      <div class="mob-menu is-hidden" data-menu>
+        <div class="container">
+          <div class="mob-menu-top">
+            <button type="button" class="menu-close-btn">
+              <svg class="logo__icon" width="24" height="16">
+                <use href="./img/icon/symbol-defs.svg#icon-close"></use>
+              </svg>
+            </button>
+            <ul class="mob-menu-list list">
+              <li class="mob-menu-list__item">
+                <a
+                  href="https://www.google.com/"
+                  class="mob-menu-list__link menu-list__link--current link"
+                  >О нас</a
+                >
+              </li>
+              <li class="mob-menu-list__item">
+                <a href="./portfolio.html" class="mob-menu-list__link link"
+                  >Услуги и цены</a
+                >
+              </li>
+              <li class="mob-menu-list__item">
+                <a href="#masters" class="mob-menu-list__link link">Мастера</a>
+              </li>
+              <li class="mob-menu-list__item">
+                <a
+                  href="https://www.google.com/"
+                  class="mob-menu-list__link link"
+                  >Контакты</a
+                >
+              </li>
+            </ul>
+          </div>
+          <div class="mob-menu-bottom">
+            <div class="mob-connect">
+              <a class="mob-connect__tel link" href="tel:+380441111111"
+                >+38 044 111 11 11</a
+              >
+              <button
+                type="button"
+                class="mob-connect__btn btn"
+                data-modal-open
+              >
+                Онлайн-запись
+              </button>
+            </div>
+            <ul class="mob-soc-list list">
+              <li class="mob-soc-list__item">
+                <a href="" target="_blank" class="mob-soc-list__link link"
+                  >Instagram</a
+                >
+              </li>
+              <li class="mob-soc-list__item">
+                <a href="" target="_blank" class="mob-soc-list__link link"
+                  >Youtube</a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
       </div>
     </header>
 
     <main>
       <!-- hero -->
       <section class="hero">
-        <div class="container hero-container">
+        <div class="container">
           <div class="soc">
             <ul class="soc__list list">
               <li class="soc-list__item">
@@ -130,7 +197,7 @@
                 </div> -->
               </div>
             </div>
-            <div class="swiper-pagination"></div>
+            <!-- <div class="swiper-pagination"></div> -->
           </div>
         </div>
       </section>
@@ -140,25 +207,55 @@
         <div class="container about__container">
           <ul class="about__list list">
             <li class="about-list__item">
-              <img
-                src="./img/about-us/img1.jpg"
-                alt="барбер бреет шею"
-                width="270"
-                height="445"
-              />
+              <picture>
+                <source
+                  srcset="
+                    ./img/about-us/img1.jpg    1x,
+                    ./img/about-us/img1-2x.jpg 2x
+                  "
+                  media="(min-width: 1200px)"
+                />
+                <source
+                  srcset="
+                    ./img/about-us/img1-tab.jpg    1x,
+                    ./img/about-us/img1-tab-2x.jpg 2x
+                  "
+                  media="(min-width: 768px)"
+                />
+                <img
+                  src="./img/about-us/img1-tab.jpg"
+                  alt="барбер стрижет клиента"
+                />
+              </picture>
             </li>
             <li class="about-list__item">
-              <img
-                src="./img/about-us/img2.jpg"
-                alt="барбер стрижет кантик"
-                width="270"
-                height="445"
-              />
+              <picture>
+                <source
+                  srcset="
+                    ./img/about-us/img2.jpg    1x,
+                    ./img/about-us/img2-2x.jpg 2x
+                  "
+                  media="(min-width: 1200px)"
+                />
+                <source
+                  srcset="
+                    ./img/about-us/img2-tab.jpg    1x,
+                    ./img/about-us/img2-tab-2x.jpg 2x
+                  "
+                  media="(min-width: 768px)"
+                />
+                <img
+                  src="./img/about-us/img2-tab.jpg"
+                  alt="барбер стрижет клиента"
+                />
+              </picture>
             </li>
           </ul>
           <div class="about-content">
             <p class="about-content__top-text top-text top-text--dark">О НАС</p>
-            <h2 class="about-content__title title">Лучший Барбершоп твоего города</h2>
+            <h2 class="about-content__title title">
+              Лучший Барбершоп твоего города
+            </h2>
             <p class="about-after-title after-title">
               Если ты хочешь добавить в свой образ больше уверенности – тебе
               точно к нам.
@@ -170,7 +267,9 @@
               клиентами "на одной волне". Поэтому, мы всегда готовы
               усовершенствовать каждого, кто к нам приходит!
             </p>
-            <button class="about-content__button-tex btn" type="button">онлайн-запись</button>
+            <button class="about-content__button-tex btn" type="button">
+              онлайн-запись
+            </button>
           </div>
         </div>
       </section>
@@ -178,7 +277,7 @@
       <!-- Services and prices -->
       <section class="prices section">
         <div class="container">
-          <p class="prices-pre-title pre-title">
+          <p class="prices-pre-title top-text">
             Проведи время в компании лучших мастеров
           </p>
           <h2 class="prices-title title">Услуги и цены</h2>
@@ -241,13 +340,14 @@
                 <span class="reasons-item-count">600</span>
                 <p class="reasons-item-text">Довольных клиентов в день</p>
               </li>
-              <li class="reasons-item">
-                <span class="reasons-item-count">20</span>
-                <p class="reasons-item-text">Лучших мастеров Киева</p>
-              </li>
+
               <li class="reasons-item">
                 <span class="reasons-item-count">50</span>
                 <p class="reasons-item-text">Наград за отличный сервис</p>
+              </li>
+              <li class="reasons-item">
+                <span class="reasons-item-count">20</span>
+                <p class="reasons-item-text">Лучших мастеров Киева</p>
               </li>
               <li class="reasons-item">
                 <span class="reasons-item-count">100</span>
@@ -257,7 +357,9 @@
           </div>
           <!-- why we -->
           <div class="reasons-content">
-            <p class="reasons-pre-title pre-title">старая традиционная школа</p>
+            <p class="reasons-pre-title top-text top-text--dark">
+              старая традиционная школа
+            </p>
             <h2 class="rasons-title title">Почему приходят именно к нам?</h2>
             <p class="reasons-after-title after-title">
               О нас говорят только хорошее. Но лучше 1 раз увидеть и
@@ -270,18 +372,37 @@
       <!-- Our masters -->
       <section class="section masters" id="masters">
         <div class="container">
-          <p class="masters-pre-title pre-title">
+          <p class="masters-pre-title top-text top-text--dark">
             для настоящих ценителей атмосферы
           </p>
           <h2 class="masters-title title">Наши мастера</h2>
           <ul class="masters-list list">
             <li class="masters-item">
-              <img
-                src="./img/masters/img1.jpg"
-                alt="Барбер Джон Смит"
-                width="370"
-                height="346"
-              />
+              <picture>
+                <source
+                  srcset="
+                    ./img/masters/img1.jpg    1x,
+                    ./img/masters/img1-2x.jpg 2x
+                  "
+                  media="(min-width: 1200px)"
+                />
+                <source
+                  srcset="
+                    ./img/masters/img1-tab.jpg    1x,
+                    ./img/masters/img1-tab-2x.jpg 2x
+                  "
+                  media="(min-width: 768px)"
+                />
+                <source
+                  srcset="
+                    ./img/masters/img1-mob.jpg    1x,
+                    ./img/masters/img1-mob-2x.jpg 2x
+                  "
+                  media="(min-width: 320px)"
+                />
+                <img src="./img/masters/img1-mob.jpg" alt="Барбер Джон Смит" />
+              </picture>
+
               <div class="masters-content">
                 <h3 class="masters-item-title" lang="en">John Smith</h3>
                 <p class="masters-item-text" lang="en">Extreme Barber</p>
@@ -326,12 +447,30 @@
               </div>
             </li>
             <li class="masters-item">
-              <img
-                src="./img/masters/img2.jpg"
-                alt="Барбер Мишель Доу"
-                width="370"
-                height="346"
-              />
+              <picture>
+                <source
+                  srcset="
+                    ./img/masters/img2.jpg    1x,
+                    ./img/masters/img2-2x.jpg 2x
+                  "
+                  media="(min-width: 1200px)"
+                />
+                <source
+                  srcset="
+                    ./img/masters/img2-tab.jpg    1x,
+                    ./img/masters/img2-tab-2x.jpg 2x
+                  "
+                  media="(min-width: 768px)"
+                />
+                <source
+                  srcset="
+                    ./img/masters/img2-mob.jpg    1x,
+                    ./img/masters/img2-mob-2x.jpg 2x
+                  "
+                  media="(min-width: 320px)"
+                />
+                <img src="./img/masters/img2-mob.jpg" alt="Барбер Мишель Доу" />
+              </picture>
               <div class="masters-content">
                 <h3 class="masters-item-title" lang="en">Michele Doe</h3>
                 <p class="masters-item-text" lang="en">Extreme Barber</p>
@@ -376,12 +515,30 @@
               </div>
             </li>
             <li class="masters-item">
-              <img
-                src="./img/masters/img3.jpg"
-                alt="Барбер Алан Блэк"
-                width="370"
-                height="346"
-              />
+              <picture>
+                <source
+                  srcset="
+                    ./img/masters/img3.jpg    1x,
+                    ./img/masters/img3-2x.jpg 2x
+                  "
+                  media="(min-width: 1200px)"
+                />
+                <source
+                  srcset="
+                    ./img/masters/img3-tab.jpg    1x,
+                    ./img/masters/img3-tab-2x.jpg 2x
+                  "
+                  media="(min-width: 768px)"
+                />
+                <source
+                  srcset="
+                    ./img/masters/img3-mob.jpg    1x,
+                    ./img/masters/img3-mob-2x.jpg 2x
+                  "
+                  media="(min-width: 320px)"
+                />
+                <img src="./img/masters/img3-mob.jpg" alt="Барбер Алан Блэк" />
+              </picture>
 
               <div class="masters-content">
                 <h3 class="masters-item-title" lang="en">Alan Black</h3>
@@ -433,42 +590,114 @@
       <!-- portfolio -->
       <section class="section gallery">
         <div class="container">
-          <p class="gallery-pre-title pre-title">
+          <p class="gallery-pre-title top-text top-text--dark">
             На латинском языке “барба” означает “борода”
           </p>
           <h2 class="visually-hidden">галерея</h2>
           <ul class="gallery-list list">
             <li class="gallery-item">
-              <img
-                src="./img/portfolio/portfolio-1.jpg"
-                alt=""
-                width="270"
-                height="360"
-              />
+              <picture>
+                <source
+                  srcset="
+                    ./img/portfolio/portfolio-1.jpg    1x,
+                    ./img/portfolio/portfolio-1-2x.jpg 2x
+                  "
+                  media="(min-width: 1200px)"
+                />
+                <source
+                  srcset="
+                    ./img/portfolio/portfolio-1-tab.jpg    1x,
+                    ./img/portfolio/portfolio-1-tab-2x.jpg 2x
+                  "
+                  media="(min-width: 768px)"
+                />
+                <source
+                  srcset="
+                    ./img/portfolio/portfolio-1-mob.jpg    1x,
+                    ./img/portfolio/portfolio-1-mob-2x.jpg 2x
+                  "
+                  media="(min-width: 320px)"
+                />
+                <img src="./img/portfolio/portfolio-1-mob.jpg" alt="" />
+              </picture>
             </li>
             <li class="gallery-item">
-              <img
-                src="./img/portfolio/portfolio-2.jpg"
-                alt=""
-                width="270"
-                height="360"
-              />
+              <picture>
+                <source
+                  srcset="
+                    ./img/portfolio/portfolio-2.jpg    1x,
+                    ./img/portfolio/portfolio-2-2x.jpg 2x
+                  "
+                  media="(min-width: 1200px)"
+                />
+                <source
+                  srcset="
+                    ./img/portfolio/portfolio-2-tab.jpg    1x,
+                    ./img/portfolio/portfolio-2-tab-2x.jpg 2x
+                  "
+                  media="(min-width: 768px)"
+                />
+                <source
+                  srcset="
+                    ./img/portfolio/portfolio-2-mob.jpg    1x,
+                    ./img/portfolio/portfolio-2-mob-2x.jpg 2x
+                  "
+                  media="(min-width: 320px)"
+                />
+                <img src="./img/portfolio/portfolio-2-mob.jpg" alt="" />
+              </picture>
             </li>
             <li class="gallery-item">
-              <img
-                src="./img/portfolio/portfolio-3.jpg"
-                alt=""
-                width="270"
-                height="360"
-              />
+              <picture>
+                <source
+                  srcset="
+                    ./img/portfolio/portfolio-3.jpg    1x,
+                    ./img/portfolio/portfolio-3-2x.jpg 2x
+                  "
+                  media="(min-width: 1200px)"
+                />
+                <source
+                  srcset="
+                    ./img/portfolio/portfolio-3-tab.jpg    1x,
+                    ./img/portfolio/portfolio-3-tab-2x.jpg 2x
+                  "
+                  media="(min-width: 768px)"
+                />
+                <source
+                  srcset="
+                    ./img/portfolio/portfolio-3-mob.jpg    1x,
+                    ./img/portfolio/portfolio-3-mob-2x.jpg 2x
+                  "
+                  media="(min-width: 320px)"
+                />
+                <img src="./img/portfolio/portfolio-3-mob.jpg" alt="" />
+              </picture>
             </li>
             <li class="gallery-item">
-              <img
-                src="./img/portfolio/portfolio-4.jpg"
-                alt=""
-                width="270"
-                height="360"
-              />
+              <picture>
+                <source
+                  srcset="
+                    ./img/portfolio/portfolio-4.jpg    1x,
+                    ./img/portfolio/portfolio-4-2x.jpg 2x
+                  "
+                  media="(min-width: 1200px)"
+                />
+                <source
+                  srcset="
+                    ./img/portfolio/portfolio-4-tab.jpg    1x,
+                    ./img/portfolio/portfolio-4-tab-2x.jpg 2x
+                  "
+                  media="(min-width: 768px)"
+                />
+                <source
+                  srcset="
+                    ./img/portfolio/portfolio-4-mob.jpg    1x,
+                    ./img/portfolio/portfolio-4-mob-2x.jpg 2x
+                  "
+                  media="(min-width: 320px)"
+                />
+                <img src="./img/portfolio/portfolio-4-mob.jpg" alt="" />
+              </picture>
             </li>
           </ul>
         </div>
@@ -552,17 +781,20 @@
         </div>
       </div>
     </footer>
+
+    <!-- MODAL -->
     <div class="backdrop is-hidden" data-modal>
       <div class="modal">
         <div class="modal-close" data-modal-close></div>
         <form cls="modal-form" action="#">
-          <input type="text" name="name" placeholder="name">
+          <input type="text" name="name" placeholder="name" />
           <button type="submit">відправити</button>
         </form>
       </div>
     </div>
 
-    <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
+    <!-- <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script> -->
+    <script src="./js/menu.js"></script>
     <script src="./js/main.js"></script>
   </body>
 </html>

@@ -21,3 +21,18 @@
   background-color: var(--accent-color);
   color: var(--first-btn-color);
 }
+
+.btn-menu {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  background-color: inherit;
+  border: none;
+  overflow: hidden;
+
+  @include tablet {
+    display: none;
+  }
+}

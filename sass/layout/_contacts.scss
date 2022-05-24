@@ -1,0 +1,76 @@
+.contact {
+  // flex-grow: 1;
+  // padding-top: 130px;
+  // padding-left: 100px;
+  // padding-bottom: 130px;
+}
+.contact-title {
+  color: var(--first-title-color);
+}
+.contact-address {
+  max-width: 270px;
+  font-style: normal;
+  margin-bottom: 70px;
+}
+.contact-item {
+  margin-bottom: var(--tipycal-gap);
+}
+.contact-link {
+  display: flex;
+  align-items: center;
+}
+.contact-item:first-child .contact-link::before {
+  content: "";
+  position: relative;
+  top: -15px;
+  width: 28px;
+  height: 24px;
+  margin-right: 16px;
+  background-image: url(../img/contact/map-pin.svg);
+}
+.contact-item:nth-child(2) .contact-link::before {
+  content: "";
+  width: 24px;
+  height: 24px;
+  margin-right: 16px;
+  background-image: url(../img/contact/phone.svg);
+}
+.contact-item:last-child .contact-link::before {
+  content: "";
+  width: 24px;
+  height: 24px;
+  margin-right: 16px;
+  background-image: url(../img/contact/mail.svg);
+}
+.contact-item {
+  margin-bottom: var(--tipycal-gap);
+}
+.contact-item {
+  margin-bottom: var(--tipycal-gap);
+}
+.contact-link {
+  font-size: 18px;
+  line-height: 1.67;
+  letter-spacing: 0.02em;
+  color: #9ca4bd;
+}
+.contact-time-title {
+  display: flex;
+  margin-bottom: var(--tipycal-gap);
+  font-weight: 600;
+  font-size: 11px;
+  line-height: 1.36;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--first-title-color);
+}
+.contact-time-title.pre-title::before {
+  width: 60px;
+  background-color: #9ca4bd;
+}
+.contact-time-text {
+  font-size: 18px;
+  line-height: 1.67;
+  letter-spacing: 0.02em;
+  color: #9ca4bd;
+}

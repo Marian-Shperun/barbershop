@@ -1,0 +1,72 @@
+.prices {
+  /* max-width: 1280px;
+  margin: 0 auto; */
+  background-color: #111319;
+  background-image: url(../img/prices/bg.png);
+  /* linear-gradient(#111319, #111319); */
+  background-position: top center;
+  background-position: top center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.prices-pre-title {
+  color: rgba(157, 164, 189, 0.6);
+}
+.prices-title {
+  color: var(--first-title-color);
+}
+.prices-wrapper {
+  // display: flex;
+  margin-bottom: 50px;
+  padding: 30px 40px;
+
+  background: linear-gradient(180deg, #171a24 0%, rgba(23, 26, 36, 0.2) 100%);
+}
+.prices-list {
+  // flex-grow: 1;
+  // padding: 30px 40px;
+  /* border: 1px solid #ffffff; */
+}
+.prices-list:nth-child(1) {
+  margin-bottom: 20px;
+  background: linear-gradient(180deg, #171a24 0%, rgba(23, 26, 36, 0.2) 100%);
+}
+// .prices-list:nth-child(2) {
+//   background: linear-gradient(180deg, #090b13 0%, rgba(9, 11, 19, 0.2) 100%);
+// }
+.prices-item {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  margin-bottom: var(--tipycal-gap);
+}
+.prices-item:last-child {
+  margin-bottom: 0;
+}
+.prices-item-text {
+  font-size: 14px;
+  line-height: 1.67;
+  letter-spacing: 0.02em;
+  color: #9da4bd;
+  @include tablet {
+    font-size: 18px;
+  }
+}
+.prices-item:after {
+  content: "";
+  /* display: block;
+  position: relative;
+  top: 20px; */
+  height: 1px;
+  margin: 0 6px;
+  background-color: #9da4bd;
+  flex-grow: 1;
+}
+.prices-item-text:last-child {
+  order: 1;
+}
+.prices-btn {
+  display: block;
+  color: var(--first-btn-color);
+  margin: 0 auto;
+}

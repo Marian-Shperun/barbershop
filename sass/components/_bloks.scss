@@ -1,20 +1,6 @@
-body {
-  font-family: "Open Sans", sans-serif;
-  color: var(--primary-color);
-  background-color: var(--secondary-color);
-}
 
-@import 'visuality-hidden';
 
-.section {
-  padding-top: 130px;
-  padding-bottom: 130px;
-}
-.container {
-  max-width: 1200px;
-  padding: 0 15px;
-  margin: 0 auto;
-}
+
 
 .top-text {
   display: flex;
@@ -38,22 +24,11 @@ body {
   /* background-color: currentColor; */
 }
 
-.title {
-  margin-bottom: 44px;
-  font-family: var(--secondery-font-family);
-  font-size: 42px;
-  line-height: 1.16;
-  letter-spacing: 0.05em;
-
-  color: var(--secondary-title-color);
-}
-
 .after-title {
   font-weight: 400;
   font-size: 18px;
   line-height: 1.67;
   letter-spacing: 0.02em;
-
   margin-bottom: var(--tipycal-gap);
 }
 

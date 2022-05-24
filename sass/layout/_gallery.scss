@@ -1,0 +1,20 @@
+.gallery {
+}
+.gallery-pre-title {
+  margin-bottom: 44px;
+}
+.visually-hidden {
+}
+.gallery-list {
+  display: flex;
+  flex-wrap: wrap;
+  column-gap: 30px;
+  row-gap: 30px;
+  /* margin-left: -30px;
+  margin-bottom: -30px; */
+}
+.gallery-item {
+  // width: calc(100% / 4 - 30px);
+  /* margin-left: 30px;
+  margin-bottom: 30px; */
+}

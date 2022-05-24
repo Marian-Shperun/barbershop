@@ -1,6 +1,8 @@
 .footer-copy {
-  padding-top: 57px;
-  padding-bottom: 55px;
+  // padding-top: 57px;
+  // padding-bottom: 55px;
+  padding-top: 44px;
+  padding-bottom: 44px;
 }
 .footer-text {
   font-weight: 600;
@@ -18,7 +20,9 @@
   justify-content: space-between;
 }
 .footer-list {
-  display: flex;
+  @include mobile {
+    display: flex;
+  }
 }
 
 .footer-item {

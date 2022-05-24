@@ -1,0 +1,56 @@
+.mob-menu {
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 118px 18px;
+  width: calc(100% - 133px);
+  height: 100vh;
+  background-color: #fff;
+
+  opacity: 1;
+  visibility: visible;
+  transition: all 0.5s;
+  .mob-connect__btn {
+    margin-top: 36px;
+    margin-bottom: 76px;
+    color: hsla(0, 0%, 19%, 1);
+  }
+}
+
+.menu-close-btn {
+  position: absolute;
+  top: 48px;
+  right: 31px;
+  border: none;
+  background-color: inherit;
+}
+.mob-menu-top {
+  margin-bottom: 64px;
+}
+
+.mob-menu-list__item:not(:last-child) {
+  margin-bottom: 24px;
+}
+.menu-list__link {
+  text-decoration: none;
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 25px;
+  /* identical to box height */
+
+  letter-spacing: 0.1em;
+
+  color: #303030;
+  &--current {
+    color: var(--accent-color);
+  }
+}
+
+.is-hidden {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transition: all .5s;
+}

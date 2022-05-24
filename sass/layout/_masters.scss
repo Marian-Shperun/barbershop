@@ -1,0 +1,92 @@
+.masters {
+  background-color: #f7f7f7;
+
+  @include tablet {
+    & .container {
+      padding: 0 159px;
+    }
+  }
+}
+// .masters-pre-title {
+//   @include tablet {
+//     justify-content: center;
+//   }
+// }
+// .masters-title {
+//   @include tablet {
+//     text-align: center;
+//   }
+// }
+.masters-list {
+  // display: flex;
+  /* якщо ul небуди мати фону або бордера */
+  /* margin-left: -30px;  */
+  column-gap: 20px;
+  flex-wrap: wrap;
+}
+.masters-item {
+  max-width: 450px;
+  /* position: relative; */
+  // flex-basis: calc(100% / 3 - 30px);
+  /* width: calc((100% - 60px) / 20px); */
+  /* margin-left: 30px; */
+}
+
+.masters-item:not(:last-child) {
+  margin-bottom: 64px;
+}
+
+.masters-item img {
+  margin-bottom: 30px;
+}
+
+.masters-item-title {
+  margin-bottom: 8px;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 1.39;
+  text-align: center;
+  letter-spacing: 0.02em;
+  color: #303030;
+}
+.masters-item-text {
+  margin-bottom: 30px;
+  font-size: 14px;
+  line-height: 1.36;
+  text-align: center;
+  letter-spacing: 0.02em;
+  color: var(--accent-color);
+}
+.masters-soc-list {
+  display: flex;
+  justify-content: center;
+}
+
+.masters-soc-item {
+}
+.masters-soc-item + .masters-soc-item {
+  margin-left: 10px;
+}
+.masters-soc-link {
+  width: 44px;
+  height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #fff;
+  border-radius: 50%;
+  fill: #303030;
+
+  transition: 0.3s;
+}
+.masters-soc-link:hover,
+.masters-soc-link:focus {
+  fill: var(--accent-color); /*зпрацює тільки з кольором*/
+}
+
+/* .masters-soc-icon {
+  fill: currentColor;
+} */
+/* .masters-soc-link:hover .masters-soc-icon {
+  fill: teal;
+} */
