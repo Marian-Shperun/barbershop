@@ -6,6 +6,11 @@
       padding: 0 159px;
     }
   }
+  @include desktop {
+    & .container {
+      padding: 0 15px;
+    }
+  }
 }
 // .masters-pre-title {
 //   @include tablet {
@@ -18,26 +23,30 @@
 //   }
 // }
 .masters-list {
-  // display: flex;
-  /* якщо ul небуди мати фону або бордера */
-  /* margin-left: -30px;  */
-  column-gap: 20px;
-  flex-wrap: wrap;
+  // якщо ul небуди мати фону або бордера
+  // margin-left: -30px;
+
+  @include desktop {
+    display: flex;
+    column-gap: 30px;
+    flex-wrap: wrap;
+  }
 }
 .masters-item {
-  max-width: 450px;
-  /* position: relative; */
-  // flex-basis: calc(100% / 3 - 30px);
-  /* width: calc((100% - 60px) / 20px); */
-  /* margin-left: 30px; */
-}
+  // max-width: 450px;
+  & img {
+    margin-bottom: 30px;
+  }
 
-.masters-item:not(:last-child) {
-  margin-bottom: 64px;
-}
+  @media screen and (max-width: 1199px) {
+    &:not(:last-child) {
+      margin-bottom: 64px;
+    }
+  }
 
-.masters-item img {
-  margin-bottom: 30px;
+  @include desktop {
+    flex-basis: calc((100% - 60px) / 3);
+  }
 }
 
 .masters-item-title {
